@@ -34,7 +34,7 @@ Adopter.init(
       allowNull: false,
       validate: {
         min: -90,
-        min: 90,
+        max: 90,
       }
     },
     lng: {
@@ -42,7 +42,7 @@ Adopter.init(
       allowNull: false,
       validate: {
         min: -180,
-        min: 180,
+        max: 180,
       },
     }
   },
