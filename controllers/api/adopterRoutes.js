@@ -18,7 +18,8 @@ router.post("/",(req,res)=>{
     }).then(newAdopter=>{
         req.session.user = {
             id:newAdopter.id,
-            displayName:newAdopter.displayName
+            displayName:newAdopter.displayName,
+            isAdopter:true
         }
         req.session.loggedIn = true;
         res.status(201).json(newAdopter);

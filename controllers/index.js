@@ -1,9 +1,17 @@
 const express = require('express');
 const router = express.Router();
-const apiRoutes = require("./api")
 
+const frontEndRoutes = require("./frontEnd")
+router.use("/",frontEndRoutes);
+
+const apiRoutes = require("./api")
 router.use("/api",apiRoutes);
+
 router.get("/sess",(req,res)=>{
+    res.json(req.session)
+})
+router.get("/forcelogout",(req,res)=>{
+    req.session.destroy()
     res.json(req.session)
 })
 router.get("*",(req,res)=>{

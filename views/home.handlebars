@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/css/home.css">
+<h1>Welcome</h1>
+<h2>Check out our available pigs</h2>
+<div id="card-box">
+
+{{#each piggies}}
+    <div class="card">
+        <h3>{{name}}</h3>
+        <img src="{{image}}" alt="pic of pig named {{name}}">
+    </div>
+{{/each}}
+</div>

@@ -1,0 +1,15 @@
+form{
+    width: 40%;
+    margin:0 auto;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+}
+
+input,button{
+    margin: 5px 0;
+}
+
+.loading {
+    opacity: 0.5;
+}
