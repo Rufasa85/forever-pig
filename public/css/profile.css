@@ -1,0 +1,17 @@
+.pig-card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.pigCard{
+    width:30%;
+}
+
+.pigCard image{
+    display: block;
+    margin:0 auto;
+    width:80%;
+}
+
+.trait-btn {
+    background-color: cornflowerblue;
+}

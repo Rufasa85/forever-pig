@@ -1,30 +1,36 @@
+<link rel="stylesheet" href="/css/profile.css" />
 <h1>Welcome back, {{displayName}}!</h1>
 {{#if hasPigs}}
   <h2>Your pigs</h2>
   {{#each Pigs}}
-    <div class="pigCard">
-
-      <h3>{{name}}</h3>
-      <h4>{{Farmer.displayName}}</h4>
-      <img src="{{image}}" alt="" />
-      {{#each Traits}}
-        <button>{{trait}}</button>
-      {{/each}}
-      <button class="return" data-pig-id="{{id}}">Return pig</button>
+    <div class="pig-card-wrapper">
+      <div class="pigCard">
+        <h3>{{name}}</h3>
+        <h4>{{Farmer.displayName}}</h4>
+        <img src="{{image}}" alt="" />
+        {{#each Traits}}
+          <button class="trait-btn">{{trait}}</button>
+        {{/each}}
+        <br>
+        <button class="return" data-pig-id="{{id}}">Return pig</button>
+      </div>
     </div>
   {{/each}}
 {{/if}}
 <h2>Available Pigs</h2>
-  {{#each availablePigs}}
+{{#each availablePigs}}
+  <div class="pig-card-wrapper">
     <div class="pigCard">
-
       <h3>{{name}}</h3>
       <h4>{{Farmer.displayName}}</h4>
       <img src="{{image}}" alt="" />
       <h2>{{distance}} miles away!</h2>
       {{#each Traits}}
-        <button>{{trait}}</button>
+        <button class="trait-btn">{{trait}}</button>
       {{/each}}
+      <br>
       <button class="adopt" data-pig-id="{{id}}">Adopt pig</button>
     </div>
-  {{/each}}
+  </div>
+{{/each}}
+<script src="/js/profile.js"></script>
